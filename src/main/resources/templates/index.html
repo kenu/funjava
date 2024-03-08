@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wordz</title>
+</head>
+<body>
+<section>
+    <h1>Words</h1>
+    <h2 th:text="'Hello, ' + ${words} + '!'">placeholder</h2>
+    <button onclick="navigation.reload()">Reload</button>
+</section>
+</body>
+</html>
