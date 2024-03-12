@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Wordz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wordz</title>
+  <style>
+    .word {
+      font-size: 2.0em;
+    }
+
+    section {
+      width: 80%;
+      min-width: 600px;
+      border: 2px solid #f88;
+      text-align: center;
+      padding: 20px 10px;
+      border-radius: 10px;
+      margin: auto;
+    }
+  </style>
 </head>
+
 <body>
-<section>
+  <section>
     <h1>Words</h1>
-    <h2 th:text="'Hello, ' + ${words} + '!'">placeholder</h2>
+    <p class="word" th:text="'Hello, ' + ${words} + '!'">placeholder</p>
     <button onclick="navigation.reload()">Reload</button>
-</section>
+  </section>
 </body>
+
 </html>
