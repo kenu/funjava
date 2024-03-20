@@ -55,7 +55,8 @@ public class Words {
         "최적화는 미루자. 하드웨어가 곧 빨라진다.",
         "안될 땐 안된다.",
         "프로그래밍이 늦어지는 것은 타자가 늦어서가 아니다.",
-        "아닌건 갈아엎고 다시하자."
+        "아닌건 갈아엎고 다시하자.",
+        "뻘짓은 끝없는 루프다"
     };
 
     Random random = new Random(System.currentTimeMillis());
