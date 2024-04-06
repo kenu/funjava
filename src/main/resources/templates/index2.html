@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wordz</title>
+  <style>
+    .word {
+      font-size: 2.0em;
+    }
+
+    section {
+      width: 80%;
+      min-width: 600px;
+      border: 2px solid #f88;
+      text-align: center;
+      padding: 20px 10px;
+      border-radius: 10px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>Words</h1>
+    <p class="word" th:text="'Hello, ' + ${word1} + '!'">placeholder</p>
+    <p class="word" th:text="'Hello, ' + ${word2} + '!'">placeholder</p>
+    <p class="word" id="ajax">place</p>
+    <button onclick="navigation.reload()">Reload</button>
+  </section>
+  <script>
+    fetch('/api/words').then(res => {
+      return res.json()
+    }).then(data => {
+      document.getElementById('ajax').innerText = JSON.stringify(data.content)
+    })
+    
+    
+  </script>
+</body>
+
+</html>

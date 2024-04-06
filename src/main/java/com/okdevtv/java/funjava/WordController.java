@@ -13,6 +13,16 @@ public class WordController {
     model.addAttribute("words", Words.getString());
     return "index";
   }
+  
+  @GetMapping("/2")
+  public String word2(Model model) throws InterruptedException {
+    String word1 = Words.getString();
+    model.addAttribute("word1", word1);
+    Thread.sleep(10);
+    String word2 = Words.getString();
+    model.addAttribute("word2", word2);
+    return "index2";
+  }
 }
 
 @CrossOrigin(origins = "*")
