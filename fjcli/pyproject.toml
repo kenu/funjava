@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fjcli"
+version = "0.0.0"
+authors = [
+  { name="David Timber", email="dxdt@dev.snart.me" },
+]
+description = "fjcli, print one proverb from https://fun.okdevtv.com/"
+readme = "README.md"
+requires-python = ">= 3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/kenu/funjava/"
+Issues = "https://github.com/kenu/funjava/issues"
